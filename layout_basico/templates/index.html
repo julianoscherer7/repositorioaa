@@ -4,19 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, inittial-scale=1.0">
     <tittle>MEU PRIMEIRO LAYOUT EM HTML</tittle>
+    <style>
+        #menu{
+            width:100vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            border-bottom: 1px solid #000;
+        }
+        .nav-menu{width: 50vw;}
+        .nav-menu ul{list-style: none; display: flex; flex-direction: row; gap: 12px; justify-content: start;}
+        .nav-menu ul li a{
+            color: #0e0e0e;
+            text-decoration: none;
+        }
+        .nav-menu ul li a:hover{
+            color: #786f67;
+            background-color: gold;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 50px;
+        }
+        section.section div.imagem images{
+            width: 128px;
+            display: flex;
+            padding: 6px;
+        }
+        section.section{
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
 </head>
 <body>
     <div id="menu">
-        <nav>
-            <ul style="list-style: none;">
-                <li>Home</li>
-                <li>Receitas salgadas</li>
-                <li>Receitas doces</li>
+        <nav class="nav-menu">
+            <ul class="section">
+                <li><a href="https://www.youtube.com/watch?v=JUAettWAnik">Home</a></li>
+                <li><a href="#">Receitas salgadas</a></li>
+                <li><a href="#">Receitas doces</a></li>
             </ul>
         </nav>
     </div>
     <div id="conteudo">
-        <section style="display: flex;">
+        <section class="section">
             <div id="Receitas-salgados"></div>
             <ul>
                 <li>Receita 1</li>
@@ -36,7 +67,7 @@
                 <li>Receita 6</li>
             </ul>
         </section>
-        <section style="display: flex; width: 50vw;">
+        <section class="section">
             <div class="imagem"><img src="images/close-up-hand-holding-spoon.jpg" style="width: 100%;"/></div>
             <div class="imagem"><img src="images/close-up-hands-holding-food-croquette.jpg"style="width: 100%;"/></div>
         </section>
